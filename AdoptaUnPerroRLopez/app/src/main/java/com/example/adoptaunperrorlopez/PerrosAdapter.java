@@ -46,11 +46,10 @@ public class PerrosAdapter extends RecyclerView.Adapter< PerrosAdapter.PerroView
         }
         public void bind(Perro perro){
 
-            itemViewBinding.tvNombre.setText(perro.getNombre());
-            itemViewBinding.tvEdad.setText(perro.getEdad());
-            itemViewBinding.tvRaza.setText(perro.getRaza());
-            itemViewBinding.tvTamano.setText(perro.getTamano());
+            itemViewBinding.tvNombrePerro.setText(perro.getNombre());
 
+            int resourceId = itemView.getContext().getResources().getIdentifier(perro.getImagenFondo(),"drawable",itemView.getContext().getPackageName());
+            itemViewBinding.fondoImageView.setImageResource(resourceId);
         }
 
         public PerroViewHolder(@NonNull View itemView) {
