@@ -1,8 +1,11 @@
 package com.example.adoptaunperrorlopez;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
 import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,14 +38,26 @@ public class PerrosAdapter extends RecyclerView.Adapter< PerrosAdapter.PerroView
     public void onBindViewHolder(@NonNull PerroViewHolder holder, int position) {
         Perro perro = perros.get(position);
         holder.bind(perro);
+        holder.btnMasInformacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), DetallePerroActivity.class);
+                intent.putExtra("perro",perro);
+                v.getContext().startActivity(intent);
+
+
+            }
+        });
     }
 
     class PerroViewHolder extends RecyclerView.ViewHolder{
         private PerroItemBinding itemViewBinding;
+        private Button btnMasInformacion;
 
         public PerroViewHolder(PerroItemBinding itemViewBinding){
                 super(itemViewBinding.getRoot());
                 this.itemViewBinding = itemViewBinding;
+                btnMasInformacion = itemViewBinding.btnMasInformacion;
         }
         public void bind(Perro perro){
 
