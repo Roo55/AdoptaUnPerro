@@ -1,6 +1,8 @@
 package com.example.adoptaunperrorlopez;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +14,7 @@ import com.example.adoptaunperrorlopez.databinding.ActivityDetallePerroBinding;
 
 public class DetallePerroActivity extends AppCompatActivity {
 
-    private ActivityDetallePerroBinding binding; // Variable para el Binding de la vista
+    private ActivityDetallePerroBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +22,6 @@ public class DetallePerroActivity extends AppCompatActivity {
         binding = ActivityDetallePerroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Recibir los datos del perro
         Perro perro = getIntent().getParcelableExtra("perro");
 
         binding.tvNombre.setText(perro.getNombre());
@@ -28,7 +29,18 @@ public class DetallePerroActivity extends AppCompatActivity {
         binding.tvRaza.setText("Raza: " + perro.getRaza());
         binding.tvTamano.setText("Tamaño: " + perro.getTamano());
         binding.tvDescripcion.setText("Descripción: " + perro.getDescripcionPerro());
+        binding.tvDeseasInformacion.setText("¿Deseas más información sobre " + perro.getNombre() +"?");
+
         int resourceId = getResources().getIdentifier(perro.getImagenFondo(), "drawable", getPackageName());
         binding.fondoImageView.setImageResource(resourceId);
+
+        binding.btnInformacionAdoptarPerro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetallePerroActivity.this,FormularioAdoptarPerroActivity.class);
+                intent.putExtra("perroDetalle",perro);
+                startActivity(intent);
+            }
+        });
     }
 }

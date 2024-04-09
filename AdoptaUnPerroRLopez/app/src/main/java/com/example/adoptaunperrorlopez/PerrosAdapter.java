@@ -10,6 +10,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.adoptaunperrorlopez.databinding.ActivityDetallePerroBinding;
 import com.example.adoptaunperrorlopez.databinding.PerroItemBinding;
 
 public class PerrosAdapter extends RecyclerView.Adapter< PerrosAdapter.PerroViewHolder > {
@@ -48,6 +49,7 @@ public class PerrosAdapter extends RecyclerView.Adapter< PerrosAdapter.PerroView
 
             }
         });
+
     }
 
     class PerroViewHolder extends RecyclerView.ViewHolder{
