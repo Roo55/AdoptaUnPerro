@@ -4,18 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.adoptaunperrorlopez.databinding.ActivityDetallePerroBinding;
 
 public class DetallePerroActivity extends AppCompatActivity {
 
     private ActivityDetallePerroBinding binding;
-
+    private boolean textViewsVisible = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +25,12 @@ public class DetallePerroActivity extends AppCompatActivity {
         binding.tvRaza.setText("Raza: " + perro.getRaza());
         binding.tvTamano.setText("Tamaño: " + perro.getTamano());
         binding.tvDescripcion.setText("Descripción: " + perro.getDescripcionPerro());
-        binding.tvDeseasInformacion.setText("¿Deseas más información sobre " + perro.getNombre() +"?");
+        binding.tvDeseasInformacion.setText(getString(R.string.deseas_mas_informacion));
 
         int resourceId = getResources().getIdentifier(perro.getImagenFondo(), "drawable", getPackageName());
         binding.fondoImageView.setImageResource(resourceId);
 
+        binding.btnInformacionAdoptarPerro.setText(R.string.boton_mas_informacion);
         binding.btnInformacionAdoptarPerro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,5 +39,48 @@ public class DetallePerroActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        binding.btnToggleVisibility.setText(R.string.boton_ocultar_mostrar_detalles);
+        binding.btnToggleVisibility.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                toggleTextViewVisibility();
+
+                return true;
+            }
+        });
+    }
+
+    private void toggleTextViewVisibility() {
+
+        if (textViewsVisible) {
+            hacerTvInvisibles();
+        } else {
+            hacerTvVisibles();
+        }
+    }
+
+    private void hacerTvInvisibles() {
+        binding.tvNombre.setVisibility(View.INVISIBLE);
+        binding.tvEdad.setVisibility(View.INVISIBLE);
+        binding.tvRaza.setVisibility(View.INVISIBLE);
+        binding.tvTamano.setVisibility(View.INVISIBLE);
+        binding.tvDescripcion.setVisibility(View.INVISIBLE);
+        binding.tvDeseasInformacion.setVisibility(View.INVISIBLE);
+        binding.btnInformacionAdoptarPerro.setVisibility(View.INVISIBLE);
+
+        textViewsVisible = false;
+    }
+
+    private void hacerTvVisibles() {
+        binding.tvNombre.setVisibility(View.VISIBLE);
+        binding.tvEdad.setVisibility(View.VISIBLE);
+        binding.tvRaza.setVisibility(View.VISIBLE);
+        binding.tvTamano.setVisibility(View.VISIBLE);
+        binding.tvDescripcion.setVisibility(View.VISIBLE);
+        binding.tvDeseasInformacion.setVisibility(View.VISIBLE);
+        binding.btnInformacionAdoptarPerro.setVisibility(View.VISIBLE);
+
+        textViewsVisible = true;
     }
 }

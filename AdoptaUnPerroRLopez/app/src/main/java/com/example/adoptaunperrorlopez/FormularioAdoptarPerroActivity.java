@@ -25,7 +25,13 @@ public class FormularioAdoptarPerroActivity extends AppCompatActivity {
 
         Perro perro = getIntent().getParcelableExtra("perroDetalle");
 
-        binding.tvInfoPerro.setText("Estás rellenando este formulario para pedir información sobre: "+perro.getNombre());
+        binding.tvInfoPerro.setText(getString(R.string.texto_inicio_formulario)+" " +perro.getNombre());
+
+        binding.etNombre.setText(getString(R.string.nombre_formulario));
+        binding.etApellidos.setText(getString(R.string.apellidos_formulario));
+        binding.etTelefono.setText(getString(R.string.telefono_formulario));
+        binding.etCorreo.setText(getString(R.string.email_formulario));
+        binding.btnEnviar.setText(getString(R.string.boton_enviar_formulario));
 
         binding.btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +41,8 @@ public class FormularioAdoptarPerroActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 
     private boolean validarFormulario(){

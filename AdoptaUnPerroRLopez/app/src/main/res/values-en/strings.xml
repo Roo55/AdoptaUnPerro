@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AdoptaUnPerroRLopez</string>
+    <string name="edad_Max">3 years old</string>
+    <string name="edad_Luna">2 years old</string>
+    <string name="edad_Rocky">4 years old</string>
+    <string name="edad_Buddy">5 years old</string>
+    <string name="edad_Daisy">1 year old</string>
+
+    <string name="descripcion_perro_max">Max is a 3-year-old Labrador Retriever. He is a very active and energetic dog who enjoys long walks and play sessions in the park. He is extremely friendly and loves meeting new people and other dogs. Max is very intelligent and easy to train, making him an excellent companion for outdoor activities.</string>
+    <string name="descripcion_perro_luna">Luna is a lovely 2-year-old Golden Retriever. She is a very affectionate and loyal dog who loves spending time with her family. She enjoys swimming and playing in the water, and is very sociable with other dogs and people. Luna has a playful and active personality, but also enjoys long naps on the couch with her loved ones.</string>
+    <string name="descripcion_perro_rocky">Rocky is a 4-year-old French Bulldog. Despite his small size, he has a bold and brave personality. He is a very affectionate dog and loves spending time with his family. Rocky is known for his playful nature and sense of humor. He enjoys mischief and getting belly rubs.</string>
+    <string name="descripcion_perro_buddy">Buddy is a 5-year-old German Shepherd. He is an athletic and strong dog with a friendly and protective disposition. Buddy is extremely loyal to his family and will do anything to protect them. He is very intelligent and excels in activities such as obedience training and canine sports. Despite his imposing appearance, Buddy is a gentle and loving dog who enjoys the company of his family.</string>
+    <string name="descripcion_perro_daisy">Daisy is an adorable 1-year-old Bichon Frise. She is a very playful and energetic dog who is always ready for an adventure. Daisy has an affectionate and loving personality, and loves spending time with her family. She is very sociable and loves meeting new people and other dogs. Daisy is also known for her soft, white, curly coat, which makes her irresistible to cuddle.</string>
+
+    <!-- Razas -->
+    <string name="raza_labrador_retriever">Labrador Retriever</string>
+    <string name="raza_golden_retriever">Golden Retriever</string>
+    <string name="raza_bulldog_frances">French Bulldog</string>
+    <string name="raza_pastor_aleman">German Shepherd</string>
+    <string name="raza_bichon_frise">Bichon Frise</string>
+
+    <!-- Tamaños -->
+    <string name="tamano_grande">Big</string>
+    <string name="tamano_mediano">Medium</string>
+    <string name="tamano_pequeno">Small</string>
+    <!--Botones-->
+    <string name="deseas_mas_informacion">¿Do you want more information?</string>
+    <string name="boton_mas_informacion">MORE INFORMATION</string>
+    <string name="boton_ocultar_mostrar_detalles">Show/Hide details</string>
+
+    <!-- Formulario -->
+    <string name="texto_inicio_formulario">You are filling out this form to request information about:</string>
+
+    <!-- Formulario, texto dentro input texts -->
+    <string name="nombre_formulario">Name</string>
+    <string name="apellidos_formulario">Surnames</string>
+    <string name="telefono_formulario">Phone</string>
+    <string name="email_formulario">Email</string>
+
+    <!-- Boton formulario -->
+    <string name="boton_enviar_formulario">Send</string>
+</resources>

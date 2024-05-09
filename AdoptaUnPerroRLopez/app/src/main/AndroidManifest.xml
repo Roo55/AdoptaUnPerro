@@ -14,9 +14,6 @@
         android:theme="@style/Theme.AdoptaUnPerroRLopez"
         tools:targetApi="31" >
         <activity
-            android:name=".PedirInformacionPerroActivity"
-            android:exported="false" />
-        <activity
             android:name=".FormularioAdoptarPerroActivity"
             android:exported="false" />
         <activity
