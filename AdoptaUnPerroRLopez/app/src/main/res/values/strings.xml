@@ -25,9 +25,19 @@
     <string name="tamano_mediano">Mediano</string>
     <string name="tamano_pequeno">Pequeño</string>
 
+    <!--Botones-->
     <string name="deseas_mas_informacion">¿Deseas más información?</string>
     <string name="boton_mas_informacion">MÁS INFORMACIÓN</string>
     <string name="boton_ocultar_mostrar_detalles">Mostrar/Ocultar Detalles</string>
+
+    <!-- Actividad principal -->
+    <string name="boton_mas_informacion_principal">MÁS INFORMACIÓN</string>
+
+    <!--Detalle perro-->
+    <string name="edad_detalle">Edad</string>
+    <string name="raza_detalle">Raza</string>
+    <string name="tamano_detalle">Tamaño</string>
+    <string name="descripcion_detalle">Descripción</string>
 
     <!-- Formulario -->
     <string name="texto_inicio_formulario">Estás rellenando este formulario para pedir información sobre:</string>
@@ -37,8 +47,19 @@
     <string name="apellidos_formulario">Apellidos</string>
     <string name="telefono_formulario">Teléfono</string>
     <string name="email_formulario">Correo Electrónico</string>
+    <string name="texto_presentacion">Preséntante: ¿Por qué quieres adoptar este peludo?</string>
 
     <!-- Boton formulario -->
     <string name="boton_enviar_formulario">Enviar</string>
+
+    <!-- Errores -->
+    <string name="error_nombre">Por favor ingresa tu nombre</string>
+    <string name="error_apellidos">Por favor ingresa tus apellidos</string>
+    <string name="error_telefono">Por favor ingresa tu número de teléfono</string>
+    <string name="error_telefono_valido">Por favor ingresa un número de teléfono válido</string>
+    <string name="error_correo">Por favor ingresa tu correo electrónico</string>
+    <string name="error_correo_valido">Por favor ingresa un correo electrónico válido</string>
+    <string name="error_presentacion">Por favor, rellena la carta de presentación</string>
+
 
 </resources>

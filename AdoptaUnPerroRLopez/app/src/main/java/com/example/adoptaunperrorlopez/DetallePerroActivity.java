@@ -21,10 +21,10 @@ public class DetallePerroActivity extends AppCompatActivity {
         Perro perro = getIntent().getParcelableExtra("perro");
 
         binding.tvNombre.setText(perro.getNombre());
-        binding.tvEdad.setText("Edad: " + perro.getEdad());
-        binding.tvRaza.setText("Raza: " + perro.getRaza());
-        binding.tvTamano.setText("Tamaño: " + perro.getTamano());
-        binding.tvDescripcion.setText("Descripción: " + perro.getDescripcionPerro());
+        binding.tvEdad.setText(getString(R.string.edad_detalle)+ ": " + perro.getEdad());
+        binding.tvRaza.setText(getString(R.string.raza_detalle)+ ": " + perro.getRaza());
+        binding.tvTamano.setText(getString(R.string.tamano_detalle)+ ": " + perro.getTamano());
+        binding.tvDescripcion.setText(getString(R.string.descripcion_detalle)+ ": " + perro.getDescripcionPerro());
         binding.tvDeseasInformacion.setText(getString(R.string.deseas_mas_informacion));
 
         int resourceId = getResources().getIdentifier(perro.getImagenFondo(), "drawable", getPackageName());

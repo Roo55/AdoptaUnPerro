@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView( viewBinding.getRoot() );
 
         this.viewModel = new ViewModelProvider(this).get( MainViewModel.class );
-
         viewBinding.listaPerros.setAdapter( adapter );
         adapter.submitList(viewModel.findAllPerros());
 

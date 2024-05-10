@@ -5,11 +5,10 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+
+
 
 import com.example.adoptaunperrorlopez.databinding.ActivityFormularioAdoptarPerroBinding;
 
@@ -31,6 +30,7 @@ public class FormularioAdoptarPerroActivity extends AppCompatActivity {
         binding.etApellidos.setText(getString(R.string.apellidos_formulario));
         binding.etTelefono.setText(getString(R.string.telefono_formulario));
         binding.etCorreo.setText(getString(R.string.email_formulario));
+        binding.etPresentacion.setText(getString(R.string.texto_presentacion));
         binding.btnEnviar.setText(getString(R.string.boton_enviar_formulario));
 
         binding.btnEnviar.setOnClickListener(new View.OnClickListener() {
@@ -50,39 +50,48 @@ public class FormularioAdoptarPerroActivity extends AppCompatActivity {
         String apellidos = binding.etApellidos.getText().toString();
         String telefono = binding.etTelefono.getText().toString();
         String correo = binding.etCorreo.getText().toString();
+        String textoPresentacion = binding.etPresentacion.getText().toString();
 
         if (TextUtils.isEmpty(nombre)) {
-            binding.etNombre.setError("Por favor ingresa tu nombre");
+            binding.etNombre.setError(getString(R.string.error_nombre));
             binding.etNombre.requestFocus();
             return false;
         }
         if (TextUtils.isEmpty(apellidos)) {
-            binding.etApellidos.setError("Por favor ingresa tus apellidos");
+            binding.etApellidos.setError(getString(R.string.error_apellidos));
             binding.etApellidos.requestFocus();
             return false;
         }
         if (TextUtils.isEmpty(telefono)) {
-            binding.etTelefono.setError("Por favor ingresa tu número de teléfono");
+            binding.etTelefono.setError(getString(R.string.error_telefono));
             binding.etTelefono.requestFocus();
             return false;
         }
         if (TextUtils.isEmpty(correo)) {
-            binding.etCorreo.setError("Por favor ingresa tu correo electrónico");
+            binding.etCorreo.setError(getString(R.string.error_correo));
             binding.etCorreo.requestFocus();
             return false;
         }
 
+        if(TextUtils.isEmpty(textoPresentacion)){
+            binding.etPresentacion.setError(getString(R.string.error_presentacion));
+            binding.etPresentacion.requestFocus();
+            return false;
+        }
+
         if (!numeroTelefonoValido(telefono)) {
-            binding.etTelefono.setError("Por favor ingresa un número de teléfono válido");
+            binding.etTelefono.setError(getString(R.string.error_telefono_valido));
             binding.etTelefono.requestFocus();
             return false;
         }
 
         if (!correoValido(correo)) {
-            binding.etCorreo.setError("Por favor ingresa un correo electrónico válido");
+            binding.etCorreo.setError(getString(R.string.error_correo_valido));
             binding.etCorreo.requestFocus();
             return false;
         }
+
+
 
         return true;
 

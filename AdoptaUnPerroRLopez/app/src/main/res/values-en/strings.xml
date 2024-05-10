@@ -29,6 +29,15 @@
     <string name="boton_mas_informacion">MORE INFORMATION</string>
     <string name="boton_ocultar_mostrar_detalles">Show/Hide details</string>
 
+    <!-- Actividad principal -->
+    <string name="boton_mas_informacion_principal">MORE INFORMATION</string>
+
+    <!--Detalle perro-->
+    <string name="edad_detalle">Age</string>
+    <string name="raza_detalle">Breed</string>
+    <string name="tamano_detalle">Size</string>
+    <string name="descripcion_detalle">Description</string>
+
     <!-- Formulario -->
     <string name="texto_inicio_formulario">You are filling out this form to request information about:</string>
 
@@ -37,7 +46,17 @@
     <string name="apellidos_formulario">Surnames</string>
     <string name="telefono_formulario">Phone</string>
     <string name="email_formulario">Email</string>
+    <string name="texto_presentacion">Present yourself: Why do you want to adopt this dog? </string>
 
     <!-- Boton formulario -->
     <string name="boton_enviar_formulario">Send</string>
+    <!-- Errores -->
+    <string name="error_nombre">Please enter your name</string>
+    <string name="error_apellidos">Please enter your last name</string>
+    <string name="error_telefono">Please enter your phone number</string>
+    <string name="error_telefono_valido">Please enter a valid phone number</string>
+    <string name="error_correo">Please enter your email</string>
+    <string name="error_correo_valido">Please enter a valid email</string>
+    <string name="error_presentacion">Please fill out the presentation letter</string>
+
 </resources>

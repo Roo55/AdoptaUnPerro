@@ -62,9 +62,9 @@ public class PerrosAdapter extends RecyclerView.Adapter< PerrosAdapter.PerroView
                 btnMasInformacion = itemViewBinding.btnMasInformacion;
         }
         public void bind(Perro perro){
-
+            String textoBoton = itemViewBinding.btnMasInformacion.getResources().getString(R.string.boton_mas_informacion_principal);
             itemViewBinding.tvNombrePerro.setText(perro.getNombre());
-
+            itemViewBinding.btnMasInformacion.setText(textoBoton);
             int resourceId = itemView.getContext().getResources().getIdentifier(perro.getImagenFondo(),"drawable",itemView.getContext().getPackageName());
             itemViewBinding.fondoImageView.setImageResource(resourceId);
         }
